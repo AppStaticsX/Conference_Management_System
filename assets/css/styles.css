@@ -209,7 +209,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url("/assets/images/raw/conference.jpg") no-repeat center center;
+  background: url("../images/raw/conference.jpg") no-repeat center center;
   background-size: cover;
   padding: 20px;
   font-family: 'Poppins', sans-serif;
