@@ -1,0 +1,1078 @@
+/*-----------------------------------*
+  #IMPORT FONTS
+/*-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*-----------------------------------*
+  #GLOBAL STYLES
+/*-----------------------------------*/
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif; 
+  background-color: #181a1e;
+  background-size: cover; /* Make background cover the viewport */
+  color: white; /* Default text color */
+  overflow-x: hidden;
+  position: relative;
+}
+
+/*-----------------------------------*
+  #RESPONSIVE DESIGN ADJUSTMENTS
+/*-----------------------------------*/
+@media (max-width: 768px) {
+    .right-panel {
+        width: 40%; /* Adjust width on medium screens */
+    }
+    .menu a {
+        padding: 8px; /* Smaller padding */
+        border-radius: 10px; /* Smaller border radius */
+        font-size: 14px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .right-panel {
+        width: 50%; /* Adjust further on small screens */
+    }
+    .menu a {
+        padding: 5px; /* Minimal padding */
+        border-radius: 8px;
+        font-size: 12px; /* Further reduce font size */
+    }
+}
+
+/*-----------------------------------*
+  #NAVBAR STYLES
+/*-----------------------------------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #202528;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav-logo {
+  width: 120px;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.register-btn {
+  background: orangered;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.user-logged-in {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-logged-in img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user-greet-section {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 13px;
+  text-align: left;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .menu {
+      display: none; /* Hide menu initially */
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Adjust based on navbar height */
+      right: 20px;
+      background: #202528;
+      border: 1px solid #333;
+      padding: 10px;
+      gap: 10px;
+      z-index: 1000;
+  }
+
+  .menu a {
+      font-size: 14px;
+      padding: 8px 0;
+  }
+
+  .register-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+
+  .menu .user-logged-in {
+      flex-direction: column; /* Stack user details vertically */
+      align-items: center;
+      margin-top: 10px; /* Add spacing from menu links */
+      gap: 5px;
+  }
+
+  .menu .user-logged-in img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .menu .user-greet-section {
+      text-align: center;
+      font-size: 12px;
+  }
+
+  .menu-toggle {
+      display: block; /* Show menu toggle button */
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .menu {
+      top: 60px; /* Adjust for smaller screens */
+      right: 10px;
+  }
+
+  .menu a {
+      font-size: 12px;
+  }
+
+  .menu .user-logged-in img {
+      width: 40px;
+      height: 40px;
+  }
+
+  .menu .user-greet-section {
+      font-size: 11px;
+  }
+}
+
+/*-----------------------------------*
+  #MENU LINKS
+/*-----------------------------------*/
+.menu a {
+    display: block;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 1.5vw;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(14px, 2vw, 18px); /* Adaptive font size */
+    transition: background-color 0.3s ease; /* Smooth hover */
+}
+
+.menu a:hover {
+    color: orangered; /* Highlight text */
+}
+
+.menu i {
+    margin-right: 10px;
+}
+
+/*-----------------------------------*
+  #HERO SECTION
+/*-----------------------------------*/
+.hero-section {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("/assets/images/raw/conference.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100%; /* Adjusted width for responsiveness */
+  left: 0; /* Reset left offset */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section p .span-irc {
+  color: #ff7782;
+  font-size: 2.8rem; /* Responsive font size */
+}
+
+.hero-section p .span-itum {
+  font-size: 2.8rem; /* Responsive font size */
+}
+
+.hero-section .event-dates {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.hero-section .subtitle {
+  font-size: 1.5rem; /* Responsive font size */
+}
+
+.hero-section .subtitle-description {
+  color: #41f1b6;
+  font-weight: 400;
+}
+
+.hero-section .subtitle-description-about {
+  font-weight: 300;
+  text-align: justify;
+  max-width: 80%; /* Reduce the maximum width */
+  margin: 10px auto; /* Center-align the text block */
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 100%; /* Full width on smaller screens */
+  padding: 20px;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 100%; /* Full width on smaller screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Add spacing on smaller screens */
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px;
+    text-align: center; /* Center-align text */
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .hero-content {
+    max-width: 80%; /* Reduce width for better readability */
+  }
+
+  .hero-section p .span-irc,
+  .hero-section p .span-itum {
+    font-size: 1.5rem; /* Smaller font size */
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-image {
+    margin-top: 15px;
+  }
+
+  .hero-section .subtitle-description-about {
+    max-width: 90%; /* Slightly wider for tablet view */
+    text-align: left; /* Align to the left for better readability */
+    margin-top: 10px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 10px;
+    height: auto;
+  }
+
+  .hero-content {
+    max-width: 90%; /* Use more screen space */
+  }
+
+  .hero-section p .span-irc,
+  .hero-section p .span-itum {
+    font-size: 1.8rem; /* Smaller font size */
+  }
+
+  .hero-section .subtitle {
+    font-size: 1rem; /* Adjust subtitle size */
+  }
+
+  .hero-image img {
+    max-width: 300px; /* Smaller image */
+  }
+
+  .hero-section .subtitle-description-about {
+    max-width: 95%; /* Use almost the full screen width */
+    font-size: 0.9rem; /* Reduce font size for better readability */
+    text-align: justify;
+    margin-top: 10px;
+  }
+}
+
+/*-----------------------------------*
+  #GET TICKET BUTTON
+/*-----------------------------------*/
+.get-ticket {
+    margin-top: 40px;
+}
+
+.get-ticket button {
+    background: orange;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.5);
+}
+
+/*-----------------------------------*
+  #FOOTER STYLES
+/*-----------------------------------*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-info, .footer-social {
+    width: 45%;
+}
+
+.footer-info h3, .footer-social h3 {
+    font-size: 1.5rem;
+}
+
+.footer-info img {
+    width: 180px;
+    height: 72px;
+    margin-top: 25px;
+}
+
+.footer-social ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-social ul li {
+    margin: 8px 0;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 10px;
+    width: 50%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.875rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-info, .footer-social {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/*-----------------------------------*
+  #BLOG STYLES
+\*-----------------------------------*/
+
+/* Blog Heading */
+/* General Blog Styles */
+.blog .h1 {
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #000;
+  margin: 0 5%;
+  padding: 30px 10px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  border-radius: 15px;
+}
+
+/* Register Button */
+.blog .session-register-btn {
+  background: orangered;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Blog Card Group (Recycler View Layout) */
+.blog-card-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 0 5%;
+  padding-bottom: 3rem;
+}
+
+/* Blog Card */
+.blog-card {
+  background: #202528;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Card Banner */
+.blog-card-banner {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.blog-banner-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Blog Content */
+.blog-content-wrapper {
+  padding: 10px 0;
+}
+
+.blog-topic {
+  background: #41f1b6;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Blog Text */
+/* Blog Text with Scrollable Section */
+.blog-text {
+  position: relative;
+  overflow-y: auto; /* Enable vertical scrolling */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-height: calc(2em * 4); /* Default to 7 lines */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  padding-right: 10px; /* Add padding to avoid text overlapping with scrollbar */
+  scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+  scrollbar-color: orangered transparent; /* Custom scrollbar colors */
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+.blog-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blog-text::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.blog-text::-webkit-scrollbar-thumb {
+  background: orangered;
+  border-radius: 3px;
+}
+
+.blog-text.expanded {
+  overflow-y: visible; /* Remove scrolling when expanded */
+  text-overflow: initial;
+  -webkit-box-orient: initial;
+  max-height: none;
+}
+
+
+/* See More Link */
+.see-more {
+  display: block;
+  color: orangered;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .blog .h1 {
+    font-size: 1rem;
+    padding: 20px 5px;
+    margin: 0 2%;
+  }
+
+  .blog .session-register-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin: 5px auto;
+  }
+
+  .blog-card-group {
+    grid-template-columns: 1fr; /* Single column for small screens */
+  }
+
+  .blog-card {
+    margin: 10px 3%;
+    padding: 10px;
+  }
+
+  .blog-banner-img {
+    aspect-ratio: 4 / 3; /* Adjust for smaller screens */
+  }
+
+  .blog-topic {
+    font-size: 0.75rem;
+  }
+
+  .blog-card .h3 {
+    font-size: 1rem;
+  }
+
+  .blog-text {
+    font-size: 0.8rem;
+  }
+
+  .see-more {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .blog .h1 {
+    font-size: 1.25rem;
+    margin: 0 2%;
+  }
+
+  .blog .session-register-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .blog-card {
+    margin: 1rem 3%;
+    padding: 15px;
+  }
+
+  .blog-card-banner {
+    margin-bottom: 10px;
+  }
+
+  .blog-text {
+    font-size: 0.85rem;
+  }
+
+  .blog-topic {
+    font-size: 0.85rem;
+  }
+}
+
+/* Larger Screens (Web View) */
+@media (min-width: 1024px) {
+  .blog-card-group {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller card widths for more columns */
+    gap: 25px;
+  }
+
+  .blog-card {
+    padding: 20px;
+  }
+
+  .blog-card .h3 {
+    font-size: 1.6rem;
+  }
+}
+
+
+/*-----------------------------------*\
+  #BLOG STYLES
+\*-----------------------------------*/
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay for modern look */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+/* Dialog Box Styles */
+.dialog {
+  background: #fff;
+  color: #333;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px; /* Restrict maximum width */
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.dialog.open {
+  transform: scale(1); /* Smooth animation when opening */
+  opacity: 1;
+}
+
+/* Heading Style in Dialog */
+.dialog h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* Button Styles */
+.dialog button {
+  padding: 12px 20px;
+  margin: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  min-width: 120px; /* Ensure buttons are tap-friendly */
+}
+
+/* Confirm Button */
+.dialog .confirm {
+  background-color: #4CAF50;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.dialog .confirm:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Cancel Button */
+.dialog .cancel {
+  background-color: #f44336;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.dialog .cancel:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+}
+
+/* QR Container Styles */
+.qr-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Ensure elements stack on small screens */
+}
+
+/* User Data Styles */
+.user-data {
+  flex: 1;
+  display: flex;
+  color: #333;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* QR Canvas Styles */
+.qr-canvas {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.qr-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  top:40%;
+  left:40%;
+  border:7px solid var(--blueColor);
+  border-top-color: white;
+  animation: spin 1s infinite;
+  display: none;
+  /* background-color: red; */
+}
+
+@keyframes spin {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dialog {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .dialog h3 {
+    font-size: 1.25rem;
+  }
+
+  .dialog button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+  }
+
+  .qr-container {
+    flex-direction: column;
+  }
+
+  .qr-image {
+    width: 130px;
+    height: 130px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dialog {
+    width: 90%;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .dialog h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .dialog button {
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  .qr-container {
+    flex-direction: column;
+  }
+
+  .qr-image {
+    width: 120px;
+    height: 120px;
+    margin-top: 15px;
+  }
+}
+
+
+/* Speakers Section Styles */
+/* Speakers Section Styles */
+.speakers-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.speakers-title {
+  font-size: 2.5rem; /* Slightly larger title */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.speakers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px; /* Increased gap for better spacing */
+}
+
+.speaker-card {
+  background-color: #fff;
+  padding: 25px; /* Adjusted padding for a balanced look */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 260px; /* Slightly wider cards */
+  width: 100%;
+}
+
+.speaker-image {
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  object-fit: cover;
+  border-radius: 50%; /* Makes the image round */
+  margin-bottom: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-info h3 {
+  font-size: 1.5rem; /* Increased font size for names */
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.speaker-info p {
+  font-size: 1rem;
+  color: #555; /* Slightly darker color for better readability */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .speakers-title {
+    font-size: 2rem; /* Adjust title size for tablets */
+  }
+
+  .speaker-card {
+    max-width: 220px; /* Narrower cards on tablets */
+    padding: 20px;
+  }
+
+  .speaker-image {
+    width: 130px; /* Slightly smaller images on tablets */
+    height: 130px;
+  }
+
+  .speaker-info h3 {
+    font-size: 1.3rem; /* Smaller names on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .speakers-title {
+    font-size: 1.8rem; /* Adjust title size for mobile devices */
+  }
+
+  .speaker-card {
+    max-width: 200px; /* Narrower cards on mobile */
+    padding: 15px;
+  }
+
+  .speaker-image {
+    width: 110px; /* Smaller images on mobile */
+    height: 110px;
+  }
+
+  .speaker-info h3 {
+    font-size: 1.2rem; /* Smaller names on mobile */
+  }
+
+  .speakers-list {
+    gap: 20px; /* Reduced gap for smaller screens */
+  }
+}
+
+/* Add this CSS to style the progress dialog */
+.progress-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex; /* Ensures flexbox layout */
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
+  z-index: 9999;
+}
+
+.progress-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex; /* Flexbox for its children */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Horizontally center children */
+}
+
+#lottie-container {
+  width: 100px;
+  height: 100px;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add this CSS to style the error dialog */
+.error-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex; /* Ensures flexbox layout */
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
+  z-index: 9999;
+}
+
+.error-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+  display: flex; /* Flexbox for its children */
+  flex-direction: column; /* Arrange children vertically */
+  align-items: center; /* Horizontally center children */
+}
+
+#error-lottie-container {
+  width: 100px;
+  height: 100px;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
