@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Conference</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Lottie Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+
+    <!-- Qr code library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "mn-E2z0iAuEUcbsn_",
+        });
+    })();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="./assets/images/vector/itum.svg" alt="ITUM Logo" class="nav-logo">
+        <button class="menu-toggle">☰</button>
+        <div class="menu">
+            <a href="#">HOME</a>
+            <a href="#speakers">SPEAKERS</a>
+            <a href="#tracks">TRACKS</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#" class="register-btn">REGISTER</a>
+            <div class="user-logged-in">
+                <img src="./assets/images/vector/user-svgrepo-com.svg" alt="User">
+                <div class="user-greet-section">
+                    <text id="user-greet">Welcome, User</text>
+                    <text id="user-email">user@example.com</text>
+                </div>
+            </div>
+        </div>
+    </div>        
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <!-- Background Image -->
+        <div class="background-image"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <p>
+                <span class="span-itum">ITUM - </span>
+                <span class="span-irc">INTERNATIONAL RESEARCH CONFERENCE</span>
+            </p>
+            <text class="subtitle">4<sup>th</sup> International Research Conference of ITUM - 2025</text><br>
+            <text class="subtitle-description">
+                "Exploring New Frontiers: Innovative and Cross-disciplinary Approaches to Sustainable Engineering Practices"
+            </text>
+            <p class="subtitle-description-about">
+                The Institute of Technology, University of Moratuwa (ITUM), launched its first-ever research symposium in 2013 with the goal of cultivating a robust research culture within the institution. Since then, it has become an annual hallmark of the ITUM calendar serving as a distinguished platform to articulate and disseminate diverse and intricate research endeavours.
+                From its inception, the research committees of ITUM adeptly organized six symposiums, thereby facilitating a scholarly environment where ITUM academic staff could document and engage in meaningful discourse regarding their multifaceted, subject-specific research projects. In a significant expansion of its vision, the 2019 symposium introduced a limited number of slots for industry researchers, granting them the opportunity to share their invaluable professional insights into industry-related research.
+            </p>
+            <p class="event-dates">17-18 November 2024 | @ITUM</p>
+        </div>
+    </div>
+
+    <!-- Blog Section: Tracks and Sessions -->
+    <div id="tracks" class="blog">
+        <h1 class="h1">Tracks and Sessions</h1>
+
+        <!-- Blog Cards Group -->
+        <div class="blog-card-group">
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./assets/images/raw/track01.jpg" alt="Track 01 Image" width="250" class="blog-banner-img">
+                </div>
+                <div class="blog-content-wrapper">
+                    <h1 class="blog-topic text-tiny">TRACK 01</h1>
+                    <h3 id="session-1-title" class="session-1-title"></h3>
+                    <p class="blog-text" id="session-1-description" ></p>
+                    <div class="wrapper-flex">
+                        <div class="session-details">
+                            <i class="fas fa-calendar"></i>
+                            <text  class="session-details-text" id="session-1-date"></text>
+                            <text class="session-details-text" id="session-1-time"></text> <br>
+                            <i class="fas fa-location"></i>
+                            <text class="session-details-text" id="session-1-location"></text>
+                        </div>
+                        <div class="profile-wrapper">
+                            
+                        </div>
+                        <div class="wrapper">
+                            <button class="session-register-btn" id="session-register-btn-1">REGISTER TO SESSION</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./assets/images/raw/track02.jpg" alt="Track 01 Image" width="250" class="blog-banner-img">
+                </div>
+                <div class="blog-content-wrapper">
+                    <h1 class="blog-topic text-tiny">TRACK 02</h1>
+                    <h3 id="session-2-title" class="session-2-title"></h3>
+                    <p class="blog-text" id="session-2-description" ></p>
+                    <div class="wrapper-flex">
+                        <div class="session-details">
+                            <i class="fas fa-calendar"></i>
+                            <text  class="session-details-text" id="session-2-date"></text>
+                            <text class="session-details-text" id="session-2-time"></text> <br>
+                            <i class="fas fa-location"></i>
+                            <text class="session-details-text" id="session-2-location"></text>
+                        </div>
+                        <div class="profile-wrapper">
+                            
+                        </div>
+                        <div class="wrapper">
+                            <button class="session-register-btn" id="session-register-btn-2">REGISTER TO SESSION</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./assets/images/raw/track03.jpg" alt="Track 01 Image" width="250" class="blog-banner-img">
+                </div>
+                <div class="blog-content-wrapper">
+                    <h1 class="blog-topic text-tiny">TRACK 03</h1>
+                    <h3 id="session-3-title" class="session-3-title"></h3>
+                    <p class="blog-text" id="session-3-description" ></p>
+                    <div class="wrapper-flex">
+                        <div class="session-details">
+                            <i class="fas fa-calendar"></i>
+                            <text  class="session-details-text" id="session-3-date"></text>
+                            <text class="session-details-text" id="session-3-time"></text> <br>
+                            <i class="fas fa-location"></i>
+                            <text class="session-details-text" id="session-3-location"></text>
+                        </div>
+                        <div class="profile-wrapper">
+                            
+                        </div>
+                        <div class="wrapper">
+                            <button class="session-register-btn" id="session-register-btn-3">REGISTER TO SESSION</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./assets/images/raw/track04.jpg" alt="Track 01 Image" width="250" class="blog-banner-img">
+                </div>
+                <div class="blog-content-wrapper">
+                    <h1 class="blog-topic text-tiny">TRACK 04</h1>
+                    <h3 id="session-4-title" class="session-4-title"></h3>
+                    <p class="blog-text" id="session-4-description" ></p>
+                    <div class="wrapper-flex">
+                        <div class="session-details">
+                            <i class="fas fa-calendar"></i>
+                            <text class="session-details-text" id="session-4-date"></text>
+                            <text class="session-details-text" id="session-4-time"></text> <br>
+                            <i class="fas fa-location"></i>
+                            <text class="session-details-text" id="session-4-location"></text>
+                        </div>
+                        <div class="profile-wrapper"></div>
+                        <div class="wrapper">
+                            <button class="session-register-btn" id="session-register-btn-4">REGISTER TO SESSION</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 5 -->
+            <div class="blog-card">
+                <div class="blog-card-banner">
+                    <img src="./assets/images/raw/track05.jpg" alt="Track 01 Image" width="250" class="blog-banner-img">
+                </div>
+                <div class="blog-content-wrapper">
+                    <h1 class="blog-topic text-tiny">TRACK 05</h1>
+                    <h3 id="session-5-title" class="session-5-title"></h3>
+                    <p class="blog-text" id="session-5-description" ></p>
+                    <div class="wrapper-flex">
+                        <div class="session-details">
+                            <i class="fas fa-calendar"></i>
+                            <text class="session-details-text" id="session-5-date"></text>
+                            <text class="session-details-text" id="session-5-time"></text> <br>
+                            <i class="fas fa-location"></i>
+                            <text class="session-details-text" id="session-5-location"></text>
+                        </div>
+                        <div class="profile-wrapper"></div>
+                        <div class="wrapper">
+                            <button class="session-register-btn" id="session-register-btn-5">REGISTER TO SESSION</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="overlay" id="confirmDialog">
+                <div class="dialog">
+                    <h3>Confirm Registration</h3>
+                    <div class="qr-container">
+                        <div class="user-data">
+                            <text class="qr-userDetails" id="session-name"></text><br>
+                            <text class="qr-userDetails" id="session-date"></text>
+                            <text class="qr-userDetails" id="session-time"></text>
+                            <text class="qr-userDetails" id="session-location"></text><br>
+                            <text class="qr-userDetails" id="user-id"></text>
+                        </div>
+                        <div class="qr-canvas">
+                            <div class="loading"></div>
+                            <img src="" alt="" class="qr-image">
+                        </div>
+                    </div>
+                  <button class="confirm" id="confirmBtn">Confirm</button>
+                  <button class="cancel" id="cancelBtn">Cancel</button>
+                </div>
+              </div>
+
+              <!-- Progress Dialog with Lottie Animation -->
+              <div id="progress-dialog" class="progress-dialog" style="display: none;">
+                  <div class="progress-content">
+                    <!-- Lottie container -->
+                    <div id="lottie-container" style="width: 100px; height: 100px;"></div>
+                    <p></p>
+                  </div>
+              </div>
+  
+              <!-- Error Dialog with Lottie Animation -->
+              <div id="error-dialog" class="error-dialog" style="display: none;">
+                  <div class="error-content">
+                    <!-- Lottie container -->
+                    <div id="error-lottie-container" style="width: 100px; height: 100px;"></div>
+                    <p></p>
+                    </div>
+              </div>
+
+            <!-- Additional Blog Cards (3-5) Omitted for Brevity -->
+        </div>
+    </div>
+
+    <section id="speakers" class="speakers-section">
+        <h2 class="speakers-title">Our Speakers</h2>
+        <div class="speakers-list">
+          <div class="speaker-card-1">
+            <img src="./assets/images/raw/upn.jpg" alt="Speaker 1" class="speaker-image" id="speaker-1-image">
+            <div class="speaker-info">
+              <h3 id="speaker-1-name">Prof. U. P. Nawagamuwa</h3>
+              <p id="speaker-1-role">Department of Civil Engineering,<br>University of Moratuwa<br></p>
+            </div>
+          </div>
+          <div class="speaker-card-2">
+            <img src="./assets/images/raw/id.jpg" alt="Speaker 1" class="speaker-image" id="speaker-2-image">
+            <div class="speaker-info">
+              <h3 id="speaker-2-name">Dr. Ishara Dharmasena</h3>
+              <p id="speaker-2-role">Wolfson School of Mechanical,<br>Electrical & Manufacturing Engineering<br>Loughborough University, England</p>
+            </div>
+          </div>
+          <div class="speaker-card-3">
+            <img src="./assets/images/raw/wbmt.jpg" alt="Speaker 1" class="speaker-image" id="speaker-3-image">
+            <div class="speaker-info">
+              <h3 id="speaker-3-name">Prof. W. B. M. Thoradeniya</h3>
+              <p id="speaker-3-role">Division of Civil Engineering Technology<br> Institute of Technology <br>University of Moratuwa</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <!-- Contact Info -->
+            <div class="footer-info">
+                <img src="./assets/images/vector/itum.svg" alt="ITUM Logo">
+                <h3>Contact Us</h3>
+                <p><strong>Email:</strong> info@itum.mrt.ac.lk</p>
+                <p><strong>Phone:</strong> +1 (234) 567-890</p>
+                <p><strong>Address:</strong> INSTITUTE OF TECHNOLOGY
+                    University of Moratuwa,
+                    Diyagama,
+                    Homagama,
+                    Sri Lanka.</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="http://www.facebook.com/itum.mrt.ac.lk/">Facebook</a></li>
+                    <li><a class="xapp" href="http://twitter.com/itumlk">X</a></li>
+                    <li><a class="instagram" href="http://instagram.com/itum.mrt.ac.lk/">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/institute-of-technology-university-of-moratuwa/">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/session-data.js"></script>
+    <script type="module" src="./assets/js/session-register.js"></script>
+
+</body>
+
+</html>
