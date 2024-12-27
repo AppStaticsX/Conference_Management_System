@@ -26,7 +26,7 @@ const email_input = document.querySelector("#email");
 // Event listener for "Back to Login" button
 back_to_login_btn.addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior
-  window.location.href = "login_signup.html"; // Redirect to login/signup page
+  window.location.href = "login-signup.html"; // Redirect to login/signup page
 });
 
 // Event listener for "Reset Password" button

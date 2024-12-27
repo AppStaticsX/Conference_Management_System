@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACCOUNTING SOFTWARE DASHBOARD</title>
-    <link rel="shortcut icon" href="/Assets/images/logo.png" type="image/x-icon">
+    <title>ITUM-IRC Administrator</title>
+    <link rel="shortcut icon" href="./assets/images/vector/web-sites-svgrepo-com.svg" type="image/x-icon">
     <!---BOX ICON CDN-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    
     <!----STYLESHEET---->
     <link rel="stylesheet" href="./assets/css/admin-dashboard.css">
+    <link rel="stylesheet" href="./assets/css/calendar.css">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
             <div class="top">
 
                 <div class="logo">
-                    <h2>ADI<span class="danger">AOT</span></h2>
+                    <h2>ITUM-<span class="danger">IRC</span></h2>
                 </div>
                 <div class="close" id="close-btn">
                     <i class='bx bx-x'></i>
@@ -34,43 +35,28 @@
                 </a>  
 
                 <a href="#">
-                    <i class='bx bx-user' ></i>
+                    <i class='bx bx-book' ></i>
                     <h3>TRACK-01</h3>
                 </a>
 
                 <a href="#">
-                    <i class='bx bx-file'></i>
+                    <i class='bx bx-book'></i>
                     <h3>TRACK-02</h3>
                 </a>
 
                 <a href="#">
-                    <i class='bx bx-line-chart-down'></i>
+                    <i class='bx bx-book'></i>
                     <h3>TRACK-03</h3>
                 </a>
 
                 <a href="#">
-                    <i class='bx bx-paper-plane bx-tada' ></i>
+                    <i class='bx bx-book' ></i>
                     <h3>TRACK-04</h3>
               </a>
 
                 <a href="#">
-                    <i class='bx bxs-crown'></i>
+                    <i class='bx bx-book'></i>
                     <h3>TRACK-05</h3>
-                </a>
-
-                <a href="#">
-                    <i class='bx bxs-crown'></i>
-                    <h3>Reports</h3>
-                </a>
-
-                <a href="#">
-                    <i class='bx bx-cog bx-flashing' ></i>
-                    <h3>Settings</h3>
-                </a>
-
-                <a href="#">
-                    <i class='bx bx-add-to-queue'></i>
-                    <h3>Add Product</h3>
                 </a>
 
                <a href="#">
@@ -85,9 +71,8 @@
         <!------------MIDDLE ------------>
         <main>
             <!----------TOP -------->
-            <h1>Dashboard</h1>
+            <h1>ITUM-International Research Conference 2024</h1>
             <div class="date">
-                <input type="date">
                 <text>Track-01-Sustainable Infrastructure and Mechanical Systems.</text>
             </div>
 
@@ -95,7 +80,7 @@
             <div class="insights">
                 <!----------SALES BOX---------->
                 <div class="sales">
-                    <i class='bx bx-bar-chart-alt'></i>
+                    <i class='bx bx-chair'></i>
                     <div class="middle">
                         <div class="left">
                             <h3>Total Seats</h3>
@@ -115,7 +100,7 @@
                 
                 <!-----------INCOME BOX--------->
                 <div class="income">
-                    <i class='bx bx-line-chart'></i>
+                    <i class='bx bx-chair'></i>
                     <div class="middle">
                         <div class="left">
                             <h3>Reserved Seats</h3>
@@ -135,7 +120,7 @@
 
                 <!-----------EXPENSE BOX---------->
                 <div class="expense">
-                    <i class='bx bx-line-chart-down'></i>
+                    <i class='bx bx-chair'></i>
                     <div class="middle">
                         <div class="left">
                             <h3>Available Seats</h3>
@@ -156,31 +141,25 @@
 
             <!-------------ORDERS------------>
             <div class="recent-order">
-                <h2>Recent Orders</h2>
+                <h2>Participants</h2>
                 <table>
                     <!-------TABLE HEADING------->
                     <thead>
                         <tr>
                             <!--------TABLE HEAD ROW---->
-                            <th>Product Name</th>
-                            <th>Product number</th>
-                            <th>Payment</th>
-                            <th>Status</th>
+                            <th>Participant Name</th>
+                            <th>participantID</th>
+                            <th>Payment Status</th>
                             <th></th>
                         </tr>
                     </thead>
-                    <!-------TABLE BODY------->
                     <tbody>
-                      <!--  <tr>
-                        <td>Playstation PS5</td>
-                        <td>84332</td>
-                        <td>Due</td>
-                        <td class="warning">Pending</td>
-                        <td class="primary">Details</td>
+                        <tr>
+                        <td>Umayanga</td>
+                        <td>rRPsYue308hg2iFPuk84KyXCmKv1</td>
+                        <td>Paid</td>
                         </tr>
-                    -->
                 </table>
-                <a href="#">Show All</a>
             </div>
             
         </main>
@@ -197,18 +176,13 @@
                     <i class='bx bx-menu'></i>
                 </button>
 
-                <!------LIGHT AND DARK THEME BUTTONS-->
-                <div class="theme-toggle">
-                    <i class='bx bx-sun active'></i>
-                    <i class='bx bx-moon'></i>
-                </div>
                 <div class="profile">
-                    <div class="info">
-                        <p>Hey, <b>Ayo</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
                     <div class="profile-photo">
-                        <img src="./Assets/images/profile-1.jpg" alt="Oluwadare Taye Ayo">
+                        <img src="./assets/images/raw/admin.jpg" alt="Oluwadare Taye Ayo">
+                    </div>
+                    <div class="info">
+                        <p><b>Admin</b></p>
+                        <small class="text-muted">admin@irc.itum.com</small>
                     </div>
                 </div>
             </div>
@@ -216,94 +190,47 @@
 
             <!---------RECENT UPDATES------>
             <div class="recent-updates">
-                <h2>Recent Updates</h2>
+                <h2>Calendar 2024</h2>
 
                 <!------UPDATE BOX----->
                 <div class="updates">
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./Assets/images/ADii's Devs logo.png" alt="A.O.T">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <span class="month-picker" id="month-picker">February</span>
+                            <div class="year-picker">
+                                <span class="year-change" id="prev-year">
+                                    <pre><</pre>
+                                </span>
+                                <span id="year">2021</span>
+                                <span class="year-change" id="next-year">
+                                    <pre>></pre>
+                                </span>
+                            </div>
                         </div>
-                        <div class="message">
-                            <p><b>A.O.T Brand</b> just received an order to work on a dashboard for SHAMA</p>
-                            <small class="text-muted">3 Minutes ago</small>
+                        <div class="calendar-body">
+                            <div class="calendar-week-day">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="calendar-days"></div>
                         </div>
-                    </div>
-
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./Assets/images/profile-1.jpg" alt="A.O.T">
+                        <div class="calendar-footer">
+                            <div class="toggle">
+                                <div class="dark-mode-switch">
+                                    <div></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="message">
-                            <p><b>Oluwadare Taye Ayo</b> just received an order to collaborate on a dashboard with AOT Brand</p>
-                            <small class="text-muted">16 Minutes ago</small>
-                        </div>
-                    </div>
-
-                    <div class="update">
-                        <div class="profile-photo">
-                            <img src="./Assets/images/pic-4.png">
-                        </div>
-                        <div class="message">
-                            <p><b>Tyler</b> just received an order for Zephyron GPS, Drone</p>
-                            <small class="text-muted">18 Minutes ago</small>
-                        </div>
+                        <div class="month-list"></div>
                     </div>
                 </div>
             </div>
             <!-------END OF RECENT UPDATES---->
-
-
-            <!---------SALES ANAYTICS --------->
-            <div class="sales-analytics">
-                <h2>Sales Analytics</h2>
-
-                <!-----ONLINE CUSTOMERS----->
-                <div class="item online">
-                    <i class='bx bx-cart-alt'></i>
-                    <div class="right">
-                        <div class="info">
-                            <h3>ONLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="success">+38%</h5>
-                        <h3>2345</h3>
-                    </div>
-                </div>
-                
-                 <!-----OFFLINE CUSTOMERS----->
-                 <div class="item offline">
-                    <i class='bx bx-store' ></i>
-                    <div class="right">
-                        <div class="info">
-                            <h3>OFFLINE ORDERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="danger">-17%</h5>
-                        <h3>1100</h3>
-                    </div>
-                </div>
-
-                 <!-----NEW CUSTOMERS----->
-                 <div class="item customers">
-                    <i class='bx bx-male-female'></i>
-                    <div class="right">
-                        <div class="info">
-                            <h3>NEW CUSTOMERS</h3>
-                            <small class="text-muted">Last 24 Hours</small>
-                        </div>
-                        <h5 class="success">+25%</h5>
-                        <h3>897</h3>
-                    </div>
-                </div>
-                <!----------ADD PRODUCTS------->
-                <div class="item add-product">
-                    <div>
-                        <i class="bx-add"></i>
-                        <a href="#"><h3>Add Product</h3></a>
-                    </div>
-                </div>
-
             </div>
             <!------END OF SALES ANALYTICS------->
         </div>
@@ -313,5 +240,5 @@
 </body>
 
 <script src="./assets/js/admin-main.js"></script>
-<script src="./assets/js/admin-orders.js"></script>
+<script src="./assets/js/calendar.js"></script>
 </html>

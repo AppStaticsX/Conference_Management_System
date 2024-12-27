@@ -6,24 +6,22 @@
     --color-danger: #ff7782;
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
-    --color-white: #fff;
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
-    --color-dark: #363949;
-    --color-light: rgba(132, 139, 200, 0.18);
     --color-primary-variant: #111e88;
-    --color-dark-variant: #677483;
-    --color-background: #e0e0e2;
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
 
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
-
     --card-padding: 1.8rem;
     --padding: 1.2rem;
-
-    --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
    /*  DARK THEME VARIABLES */
@@ -425,18 +423,21 @@ main .recent-order a{
 .right .top .profile{
     display: flex;
     gap: 2rem;
-    text-align: center;
+    text-align: left;
 }
 
 /* RECENT UPDATES */
 .right .recent-updates h2{
+    margin-top: 1.5rem;
     margin-bottom: 0.8rem;
+    text-align: center;
 }
 
 .right .recent-updates .updates{
     background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
+    width: 320px;
     transition: all 300ms ease;
 }
 .right .recent-updates .updates:hover{

@@ -283,7 +283,7 @@ if (signinSubmit) {
           } else {
             // Hide progress dialog and redirect to dashboard
             hideProgressDialog();
-            window.location.href = "user-dashboard.html";
+            window.location.href = "index.html";
           }
         } else {
           // Hide progress dialog and show error alert

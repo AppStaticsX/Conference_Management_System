@@ -75,9 +75,21 @@ body {
 .register-btn {
   background: orangered;
   color: white;
+  font-family: 'poppins', sans-serif;
+  border-radius: 12px;
   text-decoration: none;
   padding: 10px 20px;
   font-weight: bold;
+}
+
+.register-btn :hover {
+  background: orangered;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: bold;
+  transform: scale(1.05);
 }
 
 .user-logged-in {
